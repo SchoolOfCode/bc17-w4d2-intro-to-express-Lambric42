@@ -16,3 +16,43 @@ app.listen(port, () => {
 //callback function executed when server starts listening, e.g. log a console message to let you know app is listenning on the specified port number
   console.log(`Example app listening on port ${port}`)
 })
+
+// am i correct in thinking i could do this by making a JSON object {
+// "message": "hello world"; would i need to define that JSON object in the server or could i pull it from another file?
+// and multiple request handlers, if i defined app.get ("/orders", req res) icould have a list of orders as JSON objects inside an array. which you could make a get request to return the contents of the object?
+// could i do a app.post ("/orders", req res) to allow a user to send orders to the API?
+
+// import express from 'express';
+
+// const app = express();
+// const port = 3000;
+
+// // Middleware to parse JSON bodies
+// app.use(express.json());
+
+// // Route to send a JSON response with a message
+// app.get('/', (req, res) => {
+//   res.json({ message: 'Hello World' });
+// });
+
+// // Route to get a list of orders
+// app.get('/orders', (req, res) => {
+//   const orders = [
+//     { id: 1, item: 'Coffee', quantity: 2 },
+//     { id: 2, item: 'Tea', quantity: 1 },
+//     { id: 3, item: 'Sandwich', quantity: 3 }
+//   ];
+//   res.json(orders);
+// });
+
+// // Route to handle POST requests to add a new order
+// app.post('/orders', (req, res) => {
+//   const newOrder = req.body;
+//   console.log('Received new order:', newOrder);
+//   // Here, you would typically add the new order to your database
+//   res.status(201).json({ message: 'Order received', order: newOrder });
+// });
+
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`);
+// });
